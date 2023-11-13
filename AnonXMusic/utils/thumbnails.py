@@ -8,7 +8,7 @@ from PIL import (Image, ImageDraw, ImageEnhance, ImageFilter,
                  ImageFont, ImageOps)
 from youtubesearchpython.__future__ import VideosSearch
 
-from config import MUSIC_BOT_NAME, YOUTUBE_IMG_URL
+from config import YOUTUBE_IMG_URL
 
 
 def changeImageSize(maxWidth, maxHeight, image):
@@ -74,10 +74,10 @@ async def gen_thumb(videoid):
         logo = ImageOps.expand(logo, border=15, fill="yellow")
         background.paste(logo, (50, 100))
         draw = ImageDraw.Draw(background)
-        font = ImageFont.truetype("assets/font2.ttf", 40)
-        font2 = ImageFont.truetype("assets/font2.ttf", 70)
-        arial = ImageFont.truetype("assets/font2.ttf", 30)
-        name_font = ImageFont.truetype("assets/font.ttf", 30)
+        font = ImageFont.truetype("AnonXMusic/assets/font2.ttf", 40)
+        font2 = ImageFont.truetype("AnonXMusic/assets/font2.ttf", 70)
+        arial = ImageFont.truetype("AnonXMusic/assets/font2.ttf", 30)
+        name_font = ImageFont.truetype("AnonXMusic/assets/font.ttf", 30)
         para = textwrap.wrap(title, width=32)
         j = 0
         draw.text(
